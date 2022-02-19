@@ -1,0 +1,115 @@
+/* COMMON */
+
+body {
+  font-family: 'Amatic SC', Arial, 'Nanum Gothic', sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+}
+header .main-visual {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+header .swiper {
+  width: calc(1200px * 3 + 20px);
+  height: 550px;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  margin-left: calc((1200px * 3 + 20px) / -2);
+}
+header .swiper .swiper-wrapper {
+  
+}
+header .swiper .swiper-slide {
+  width: 1200px;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: .2;
+  transition: opacity 1s;
+  position: relative;
+}
+header .swiper .swiper-slide-active {
+  opacity: 1;
+}
+header .swiper .swiper-slide-active:hover {
+  text-decoration: underline;
+}
+header .swiper .swiper-slide.visual1 {
+  background-image: url(../image/main-visual_1.jpg);
+}
+header .swiper .swiper-slide.visual2 {
+  background-image: url(../image/main-visual_2.jpg);
+}
+header .swiper .swiper-slide.visual3 {
+  background-image: url(../image/main-visual_3.jpg);
+}
+header .swiper .swiper-slide a {
+  display: flex;
+  width: 1200px;
+  height: 530px;
+  color: #fff;
+  font-size: 40px;
+  justify-content: center;
+  align-items: flex-end;
+}
+header .swiper-prev,
+header .swiper-next {
+  color: #888;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 254px;
+  z-index: 1;
+}
+header .swiper-prev:hover,
+header .swiper-next:hover {
+  border: 1px solid #777;
+  box-sizing: border-box;
+}
+header .swiper-prev {
+  left: 50%;
+  margin-left: -660px;
+}
+header .swiper-next {
+right: 50%;
+margin-right: -660px;
+}
+header .inner {
+  width: 1200px;
+  height: 150px;
+  margin: 0 auto;
+  background-color: royalblue;
+}
+header .logo {
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
