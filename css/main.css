@@ -2,32 +2,37 @@
 
 body {
   font-family: 'Amatic SC', Arial, 'Nanum Gothic', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
   color: #333;
 }
 a {
   text-decoration: none;
+  display: inline-block;
 }
 img {
   display: block;
 }
-
+.inner {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
 
 /* HEADER */
 header {
   width: 100%;
 }
 header .main-visual {
-  height: 550px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   background-color: #333;
 }
 header .swiper {
   width: calc(1200px * 3 + 20px);
-  height: 550px;
+  height: 400px;
   position: absolute;
   overflow: hidden;
   left: 50%;
@@ -38,7 +43,7 @@ header .swiper .swiper-wrapper {
 }
 header .swiper .swiper-slide {
   width: 1200px;
-  height: 550px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,7 +69,7 @@ header .swiper .swiper-slide.visual3 {
 header .swiper .swiper-slide a {
   display: flex;
   width: 1200px;
-  height: 530px;
+  height: 380px;
   color: #fff;
   font-size: 40px;
   justify-content: center;
@@ -82,7 +87,7 @@ header .swiper-next {
   outline: none;
   cursor: pointer;
   position: absolute;
-  top: 254px;
+  top: 179px;
   z-index: 1;
 }
 header .swiper-prev:hover,
@@ -98,18 +103,86 @@ header .swiper-next {
 right: 50%;
 margin-right: -660px;
 }
-header .inner {
-  width: 1200px;
-  height: 150px;
-  margin: 0 auto;
-  background-color: royalblue;
+
+/* LOGO */
+header .main-container {
+  width: 100%;
+  display: flex;
+}
+header .main-container > .inner {
+  height: 120px;
+  border-bottom: 1px solid #c6c6c6;
 }
 header .logo {
-  width: 100px;
-  height: 100px;
-  padding: 4px;
-  background-color: orange;
+  width: 90px;
+  height: 90px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+header .logo img {
+  width: 80px;
+}
+
+/* MAIN-MENU */
+header .main-menu {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0 40px;
+  z-index: 1;
+}
+header .main-menu .item__name {
+  font-size: 24px;
+  padding: 5px 20px 30px 20px;
+  color: #333;
+}
+header .main-menu .item__name:hover {
+  text-decoration: underline;
+}
+header .main-menu .item .item__contents {
+  width: 100%;
+  height: 0;
+  font-family: Arial, 'Nanum Gothic', sans-serif;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  background-color: #fff;
+  transition: height .3s;
+}
+header .main-menu .item:hover .item__contents {
+  height: 400px;
+}
+header .main-menu .item .item__contents .contents__menu {
+  display: flex;
+  justify-content: flex-end;
+}
+header .main-menu .item .item__contents ul {
+  padding: 10px 20px 10px 15px;
+}
+
+header .main-menu .item .item__contents ul li .ctt-menu-ttl {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  background-color: rgba(255, 250, 235, .5);
+}
+header .main-menu .item .item__contents ul:hover li .ctt-menu-ttl {
+  background-color: transparent;
+}
+header .main-menu .item .item__contents ul li a {
+  width: 220px;
+  color: #333;
+  font-size: 14px;
+  padding: 0 0 5px 5px;
+}
+header .main-menu .item .item__contents ul li:hover a {
+  text-decoration: underline;
 }
