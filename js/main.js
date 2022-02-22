@@ -1,4 +1,4 @@
-new Swiper ('header .mainVisual', {
+new Swiper ('.mainVisual', {
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
